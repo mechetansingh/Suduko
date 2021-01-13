@@ -6,8 +6,8 @@ void input(int sud[n][n],int i,int j)
   int x,y,z=1,a,b=1,c,d,e,f=1,num;
   x=j;
   y=i;
-  printf("\nEnter the number Location(%d,%d)\n",i,j);
-  scanf("%d",&num);
+  cout<<"Enter the number Location("<<i<<","<<j<<")"<<endl;
+  cin>>num;
   for(a=0;a<n;a++)
     {
       if(num==sud[a][x])
@@ -32,7 +32,7 @@ void input(int sud[n][n],int i,int j)
       sud[i][j]=num;
   else
   {
-  printf("\nYou Enterd Wrong Number,Try Again\n");
+  cout<<"You Enterd Wrong Number,Try Again"<<endl;
   input(sud,i,j);
   }
 }
@@ -48,9 +48,9 @@ int main()
                   { 1, 3, 0, 0, 0, 0, 2, 5, 0 },
                   { 0, 0, 0, 0, 0, 0, 0, 7, 4 },
                   { 0, 0, 5, 2, 0, 6, 3, 0, 0 } };
-  printf("\t\t\t\t\t\tWELCOME\n");
-  printf("\t\t\t\tIn this program you will solve SUDUKO,Excited?\n");
-  printf("\t\t\t\t\t\tLets Begin\n");
+  cout<<"\t\t\t\t\t\tWELCOME"<<endl;
+  cout<<"\t\t\t\tIn this program you will solve SUDUKO,Excited?"<<endl;
+  cout<<"\t\t\t\t\t\tLets Begin"<<endl;
   for(i=0;i<n;i++)
   {
     for(j=0;j<n;j++)
@@ -61,12 +61,12 @@ int main()
       }
     }
   }
-  printf("\nCongratulations! You Just Completed it.\n");
+  cout<<endl<<"Congratulations! You Just Completed it"<<endl;
   for(i=0;i<n;i++)
   {
     printf("\n");
     for(j=0;j<n;j++)
-    printf("%d ",sud[i][j]);
+    cout<<sud[i][j];
   }
   return 0;
 }
